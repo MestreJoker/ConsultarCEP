@@ -38,7 +38,7 @@ export default function Home() {
     }
   }
   return (
-    <main className="bg-white h-98 w-139 rounded-3xl p-7">
+    <main className="bg-white h-98 w-139 max-w-[90%] rounded-3xl p-7">
       <h1 className="font-bold text-2xl text-center">Consultar CEP</h1>
       <br />
 
