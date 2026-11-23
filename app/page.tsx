@@ -5,10 +5,17 @@ export default function Home() {
   const [getCepValue, setCepValue] = useState('')
   const [informacoesCep, setInformacoesCep] = useState<React.ReactNode>()
 
+  interface CepProps {
+    address: string
+    city: string
+    state: string
+    district: string
+  }
+
   async function consultarCep() {
     try {
       const response = await fetch(`https://cep.awesomeapi.com.br/json/${getCepValue}`)
-      const dados = await response.json()
+      const dados: CepProps = await response.json()
       console.log(dados)
 
 
